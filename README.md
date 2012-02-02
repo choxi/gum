@@ -131,6 +131,17 @@ Switching branches
     # I switch branches with the checkout command. Its ok, but what if we had:
     > git switch BRANCH
 
+Remote Branches
+========
+    # Creating tracked branches is a pain.
+    > git push origin REMOTE_BRANCH
+    > git branch --track LOCAL_BRANCH origin/REMOTE_BRANCH
+
+    # How about using the convention LOCAL_BRANCH=REMOTE_BRANCH:
+    > git track BRANCH
+    # Or just assume we're talking about the current branch
+    > git track
+
 Showing things I have changed
 ========
 
@@ -157,6 +168,7 @@ This is one of the most important parts of git. And, it is confusing.
     # Difference between two branches or revisions
     > git diff branch1 branch2
     > git diff AD34E BCDE543
+
 
 Deleting a branch
 ========
